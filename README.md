@@ -11,7 +11,6 @@
 ### 安装依赖
 
 ```bash
-cd app
 npm install
 # 或使用 yarn
 yarn install
@@ -21,13 +20,13 @@ yarn install
 由于系统PATH配置问题，推荐使用以下命令启动：
 
 ```bash（启动）
-cd app
+
 node node_modules/vite/bin/vite.js
 ```
 
 或者使用npm/yarn（如果PATH配置正确）：
 ```bash
-cd app
+
 npm run dev
 # 或
 yarn dev
@@ -37,7 +36,7 @@ yarn dev
 
 ### 构建项目
 ```bash
-cd app
+
 npm run build
 # 或
 yarn build
@@ -45,7 +44,7 @@ yarn build
 
 ### 预览生产版本
 ```bash
-cd app
+
 npm run preview
 # 或
 yarn preview
@@ -61,12 +60,11 @@ yarn preview
 
 ## 项目结构
 ```
-app/
+FutureAI/
 ├── src/
 │   ├── components/     # 可复用组件
 │   ├── sections/       # 页面区块组件
 │   ├── lib/           # 工具函数
-│   └── hooks/         # 自定义Hooks
-├── public/            # 静态资源
+│   └── hooks/         # 自定义Hooks       
 └── package.json       # 依赖配置
 ```
