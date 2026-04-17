@@ -60,7 +60,7 @@ yarn preview
 
 ## 项目结构
 ```
-FutureAI/
+Futurix-AI/
 ├── src/
 │   ├── components/     # 可复用组件
 │   ├── sections/       # 页面区块组件
