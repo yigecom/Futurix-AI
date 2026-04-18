@@ -14,6 +14,13 @@ const About = () => {
   const painPointsRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
+  const scrollToServices = () => {
+    const element = document.getElementById('services');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Content animation
@@ -195,6 +202,7 @@ const About = () => {
             <Button 
               className="btn-secondary text-white group"
               size="lg"
+              onClick={scrollToServices}
             >
               了解更多
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

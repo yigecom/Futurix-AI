@@ -48,6 +48,13 @@ const Process = () => {
   const pathRef = useRef<SVGPathElement>(null);
   const stepsRef = useRef<HTMLDivElement>(null);
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
@@ -210,7 +217,10 @@ const Process = () => {
 
         {/* CTA */}
         <div className="text-center mt-20">
-          <button className="btn-primary font-semibold text-lg px-10 py-5">
+          <button 
+            className="btn-primary font-semibold text-lg px-10 py-5"
+            onClick={scrollToContact}
+          >
             开启您的AI转型之旅
           </button>
         </div>

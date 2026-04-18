@@ -32,6 +32,13 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav 
@@ -74,6 +81,7 @@ const Navigation = () => {
             <Button 
               className="btn-primary font-semibold text-sm"
               size="sm"
+              onClick={scrollToContact}
             >
               预约咨询
             </Button>
@@ -111,6 +119,7 @@ const Navigation = () => {
           <Button 
             className="btn-primary text-dark font-semibold mt-8"
             size="lg"
+            onClick={scrollToContact}
           >
             预约咨询
           </Button>

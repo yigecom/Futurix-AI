@@ -219,6 +219,19 @@ const Hero = () => {
     delay: `${(i % 7) * 0.9}s`,
   }));
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToServices = () => {
+    const element = document.getElementById('services');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section 
       ref={heroRef}
@@ -295,6 +308,7 @@ const Hero = () => {
             <Button 
               className="btn-primary font-semibold group"
               size="lg"
+              onClick={scrollToServices}
             >
               探索AI未来，未至之域
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -303,6 +317,7 @@ const Hero = () => {
               variant="outline"
               className="btn-secondary text-white"
               size="lg"
+              onClick={scrollToContact}
             >
               预约咨询
             </Button>

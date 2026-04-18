@@ -141,7 +141,7 @@ const serviceDetails: Record<string, any> = {
     ],
     cta: '创建AI专属交互数字人'
   },
-  'geo 生成式引擎优化': {
+  'geo': {
     title: 'GEO 生成式引擎优化',
     subtitle: 'geo.futureai.com',
     description: '抢占AI生成答案的第一席位',

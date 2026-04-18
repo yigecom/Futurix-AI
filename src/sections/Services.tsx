@@ -73,6 +73,13 @@ const Services = () => {
   const cardsRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
@@ -189,7 +196,10 @@ const Services = () => {
                 </div>
 
                 {/* Link */}
-                <div className="flex items-center text-sm text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div 
+                  className="flex items-center text-sm text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                  onClick={() => navigate(`/service/${service.route}`)}
+                >
                   <span>了解更多</span>
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </div>
@@ -206,7 +216,10 @@ const Services = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-custom mb-4">需要定制化解决方案？</p>
-          <button className="btn-primary font-semibold">
+          <button 
+            className="btn-primary font-semibold"
+            onClick={scrollToContact}
+          >
             联系我们获取专属方案
           </button>
         </div>

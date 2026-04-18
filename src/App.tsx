@@ -10,6 +10,8 @@ import Process from './sections/Process';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import ServiceDetail from './sections/ServiceDetail';
+import TermsOfService from './sections/TermsOfService';
+import PrivacyPolicy from './sections/PrivacyPolicy';
 import './index.css';
 
 // Scroll to top on route change
@@ -60,6 +62,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/service/:serviceId" element={<ServiceDetail />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </Router>
